@@ -131,6 +131,7 @@ void resetGame() {
   holeLedIndex = holes[holeCounter];
   hits = 0;
   start = false;
+  sensorSampling = false;
 }
 
 void replayHole() {
@@ -140,6 +141,7 @@ void replayHole() {
   ballPositionIndex = 0;
   hysterisisCounter = 0;
   start = false;
+  sensorSampling = false;
   if (hits == 7) { // restart game
       showLoose();
       resetGame();
@@ -153,6 +155,7 @@ void nextHole() {
   ballPositionIndex = 0;
   hysterisisCounter = 0;
   start = false;
+  sensorSampling = false;
   if (holeCounter >= maxHoles) { // win !!
     showWin();
     resetGame();
